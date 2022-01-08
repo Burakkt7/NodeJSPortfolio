@@ -17,7 +17,7 @@ mongodb.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${p
 
 const portfolio = require('./models/portfolio');
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`App başladı!`);
 
     app.get('/', (req, res) => {
